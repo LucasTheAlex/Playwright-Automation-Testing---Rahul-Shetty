@@ -1,0 +1,21 @@
+{
+  "name": "playwright-automation-testing---rahul-shetty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasTheAlex/Playwright-Automation-Testing---Rahul-Shetty.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LucasTheAlex/Playwright-Automation-Testing---Rahul-Shetty/issues"
+  },
+  "homepage": "https://github.com/LucasTheAlex/Playwright-Automation-Testing---Rahul-Shetty#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2"
+  }
+}
