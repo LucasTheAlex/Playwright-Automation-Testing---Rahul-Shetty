@@ -20,12 +20,16 @@ export default defineConfig({
   testDir: './tests',
   timeout: 40 * 1000, // 40 seconds
   expect: {
-    timeout: 5000, // 5 seconds
+    timeout: 12000, // 12 seconds
   },
   reporter: 'html',
   use: {
+    actionTimeout: 10_000, 
+    navigationTimeout: 30_000,
     browserName: 'chromium',
-    headless: false
+    headless: false,
+    screenshot: 'only-on-failure',
+    trace: 'retain-on-failure'
   },
 
 });

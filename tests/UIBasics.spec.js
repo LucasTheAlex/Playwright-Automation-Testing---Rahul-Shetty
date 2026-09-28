@@ -1,5 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
+
+
 test("Browser context playwright test", async ({browser}) => {
     // chrome - plugins / cookies
     const context = await browser.newContext();
