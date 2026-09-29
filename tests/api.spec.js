@@ -42,3 +42,31 @@ test("Client app login", async ({page}) => {
     const orderIdFromDOM = await page.locator(".col-text").textContent();
     expect(orderId.includes(orderIdFromDOM.trim())).toBeTruthy();
 });
+
+test("Client app login 2", async ({page}) => {
+
+    await page.addInitScript(value => {
+        window.localStorage.setItem('token', value);
+    }, token);
+
+    await page.goto('https://rahulshettyacademy.com/client');
+    let body = JSON.stringify({
+        "data": [],
+        "message": "No Orders"
+    });
+    await page.route(
+        'https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*',
+        async route => {
+            const response = await page.request.fetch(route.request());
+            route.fulfill({
+                response,
+                body,
+
+            })
+        }
+    );
+
+    await page.locator('button[routerlink*="myorders"]').click();
+    await page.waitForResponse("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*");
+    console.log(await page.locator('.mt-4').textContent());
+});
