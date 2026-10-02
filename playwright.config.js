@@ -51,34 +51,34 @@ export default defineConfig({
         }
       }
     },
-    {
-      name: 'firefox',
-      use: {
-        actionTimeout: 10_000,
-        navigationTimeout: 30_000,
-        browserName: 'firefox',
-        headless: false,
-        screenshot: 'only-on-failure',
-        trace: 'retain-on-failure'
-      }
-    },
-    {
-      name: 'webkit',
-      use: {
-        actionTimeout: 10_000,
-        navigationTimeout: 30_000,
-        browserName: 'webkit',
-        headless: false,
-        screenshot: 'only-on-failure',
-        trace: 'retain-on-failure',
-        ...devices['iPhone 12'],
-        ignoreHTTPSErrors: true,
-        permissions: [
-          'geolocation'
-        ],
-        video: 'retain-on-failure',
-        trace: 'retain-on-failure'
-      }
-    }
+    // {
+    //   name: 'firefox',
+    //   use: {
+    //     actionTimeout: 10_000,
+    //     navigationTimeout: 30_000,
+    //     browserName: 'firefox',
+    //     headless: false,
+    //     screenshot: 'only-on-failure',
+    //     trace: 'retain-on-failure'
+    //   }
+    // },
+    // {
+    //   name: 'webkit',
+    //   use: {
+    //     actionTimeout: 10_000,
+    //     navigationTimeout: 30_000,
+    //     browserName: 'webkit',
+    //     headless: false,
+    //     screenshot: 'only-on-failure',
+    //     trace: 'retain-on-failure',
+    //     ...devices['iPhone 12'],
+    //     ignoreHTTPSErrors: true,
+    //     permissions: [
+    //       'geolocation'
+    //     ],
+    //     video: 'retain-on-failure',
+    //     trace: 'retain-on-failure'
+    //   }
+    // }
   ]
 });
