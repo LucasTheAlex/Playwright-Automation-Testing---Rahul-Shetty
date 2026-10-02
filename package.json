@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/LucasTheAlex/Playwright-Automation-Testing---Rahul-Shetty#readme",
   "devDependencies": {
+    "@azure/identity": "^4.13.3",
+    "@azure/playwright": "^1.1.6",
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2"
   }

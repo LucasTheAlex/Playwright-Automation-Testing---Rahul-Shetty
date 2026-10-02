@@ -61,7 +61,6 @@ test("Client app login 2", async ({page}) => {
             route.fulfill({
                 response,
                 body,
-
             })
         }
     );
